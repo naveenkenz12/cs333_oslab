@@ -1,0 +1,79 @@
+1.
+	input:		ls
+
+	output:		
+
+	140050013_140050021.tgz  disk1.c	     lab3_files.tgz  server-mp
+	a.out			 disk.c		     lab3.pdf	     server-mp.c
+	client			 files		     make-tokens     server-slow
+	cpu			 get-one-file	     make-tokens.c   server-slow.c
+	cpu.c			 get-one-file.c      multi-client    shell-client
+	cpu-print		 get-one-file-sig    multi-client.c  shell-client.c
+	cpu-print.c		 get-one-file-sig.c  out.txt	     t
+	disk			 lab1.odt	     script.sh	     t.c
+	disk1			 lab2_files	     server	     testcases.txt
+
+
+2. 
+	input: 		cd ~/Desktop
+
+	output:		/home/naveenkenz12/Desktop@Hello>
+
+3.
+	input:		getfl files/foo0.txt
+
+	output:		server details not present, run server <ip> <port>
+
+				(as the details of server was not given)
+
+4.
+	input: 		server 127.0.0.1 5000
+
+	output:		(no output, details saved)
+
+5.
+	input:		getfl files/foo0.txt   and then doing ctrl+c in between
+
+	output:		c0j07nbsB2wou912TgqypTIc1jzOvNHVtqPqaSZsaYmpf1D2radHUKdJ4YHDHjVxnrJHLahCsi9U4R9k8vIIzQVG3JRxbym07siujNJZUA9nnRLHtVsLmu61crgHsiWUM9F92Qs7UpHC94dOSyzmjrCr6XveqqGfqAXNWNuOMiJ2NeMfTIrm5aVoLzVhH1APU3cQruPscHMrDpc3qWJibAwH8L2oiuh3qFSUUcjeN6GLg1a72DWjsT6v9RUr4C03THP8uZ2UTBWQXzlpXeRsrNX6jUxpHL3ANXUYj4Dr6cUguOKY7HxtKwFuLf1GAoM4VmQM4qLXJkuU5TJr11dXAX8nMeSvoLTvYswbP6rgYCl7KMrrsmS9I1tMysWkr4urmdX9cksDoeAYlNbSLLogMCTcCPFOW1QKzYPhf7yEmgGmntmwHlTgZ0JBshobXu89zYPvYKGa7FvqOcnkJTGZEJiyeTJI4HXijDma66tv1AJVcocsafWYLylJltH93RV8Wp2IGbIEneK5MSj8YHr9SXu1u5fDTXczu9WKEtuIQr55tXqMGgfdAgof51d78YKqGTFJwgxnbevlW36VErXewU1XK1kQxWYDRB5mJMScX899PTtdubhkuHqHxEMCbh98TKmEOUpV1SlXYPEmH6BTvKViXGenIB2GiCWknCbW06nL2C9gCFt7Rv1gK49wPTZXwukcwpmUxfULVYB6pJxGq4mflTeYvlNY4GffVDQydcsWRshchqyr7Zi1T1IC5gVzTE1D7VpKbgK7UwY29DIc5YdHRF1ThdcGYh06OMsE70TvdpBY34s3B1xQwldmmbQ151btzGrCmI2xjBZ0ESUfcKp95lfmaDXwCNzekWVwAbXR5cEtHgpXHAUDKqdEwPlnsQU7IkUpvwYxCuLm3JXVpbR2SHvEiMhH1v3lSOrgL6dWtUednt7gIyISIvEiHC3MgI4D1ttg83aQPZaK4aUnpjKkrpvt51EQC0YLgo9QwC5dlp8eiVqXm9SeM0fm7tND^CblSBsIsT7mbl1GbAfMIaA9oEFhmke2tzXzBdBf96Uk7AAtxWSbzD6iUUQgF7MnBlD1M6KC4xgb39d5OA4etMYjH1k8kk381IGWvVBV9S6q80PxUF7r35LX7MvBYaPu9TEVLVFaoquDeMLJCff10aEloyAhZgIcSBuJdPDKkPgI02F3GZdQrVPKubX3W3WAQwx9XK2e0HCVX1NRuNj7pN0sn4eqaS7FDQ60GherkWAaDghxb956GRJsBpdT1HW6GmLBbN2wNRnAX0AaC5WsQGcg7Fuhgd0fKlX9OL1tqptJfsoOMYoKvylp4C0QnyGMSFk6ySrPzHy8k6kVnDg1zYHYigvzC7DJFrelcfOus8nQqYMnHsF2v9D7Sd2mPFkST3m8pdHkYUi7ahRZoAWq4t0SViCNpowTsHA1Almn03dTPOXtrTswaqP56Rs7jR0M5YIML3wXYSPLtZ9c4y8i1C7pAHufVaOiYFbKRYN4njCp3es9FDokKhiqqVYbtLpishNoIko7luFIh4DkZDgFEgt0Jm3pnIdzF3mL5fPmLa5nULdnUUWc6bGEuMlf2TeHe6FBlFGERrJAOPH481hDmIkbF3TvMhEWt5HUMXPxR6zqysFCAnO3YxCeBOQi81vw5t2oDRPFRghXzGD5NKaac4zbyhqxLnJEiPClRALzCChO4DwVWtDo3HgIJMQDwHQDutC9hKuOG6GYR4houfdsruBdymwDRuly65nyZ5WM9XyvN0EBstXhOiDj2UqxT8XMGwNKQj7gwBgaod74fx9vXzp8FKXLRytZna7HxspKXrziTvvQIzpOyRGehAgzkNEjCe96bzZfR1xy1XsqEYsfl58H77U2XY5KRSlqKQ2WjjMqjL7s8GnXrfD7WSj7cAPZ8gIdKvAx0UH9pFqnJ6hLA21oi4q0uoBal4EZro2uK3jN6wQC8uHa0jGENC3TNCtSpvZNUHe3uSebODJ4oJXGVPq4vLsjKvqqxflOK5KDQp34gyQfiFpe7vhl1YoCfnyAv
+		killed 11715
+		Received SIGINT; downloaded 2048 bytes so far.
+
+6. 
+	input:		getsq files/foo0.txt files/foo1.txt and doing ctrl+c in between
+
+	output:		^Ckilled 11747
+
+				Received SIGINT; downloaded 14336 bytes so far.
+
+
+7. 
+	input:		getpl files/foo0.txt files/foo1.txt and doing ctrl+c in between
+
+	output:		^Ckilled 11800
+
+				killed 11801
+				Received SIGINT; downloaded 4096 bytes so far.
+				
+				Received SIGINT; downloaded 4096 bytes so far.
+
+8.	
+	input:		getbg files/foo0.txt
+
+	output:		(no output)
+
+9.	
+	input:		getfl cpu.c | grep while
+
+	output:		  while(1)
+10. 
+other linux terminal command like cat, top and echo are also running
+
+
+Running instruction:
+make:	to make executables
+
+server code:  	./server-slow <port>
+client:		./get-one-file <file> <ip> <port> <display/nodisplay>
+		./get-one-file-sig <file> <ip> <port> <display/nodisplay>
+shell:		./shell-client
+
