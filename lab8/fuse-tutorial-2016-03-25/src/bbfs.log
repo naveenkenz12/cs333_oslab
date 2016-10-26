@@ -1,0 +1,1517 @@
+
+bb_init()
+    conn:
+    proto_major = 7
+    proto_minor = 23
+    async_read = 1
+    max_write = 131072
+    max_readahead = 131072
+    capable = 00000ffb
+    want = 00000010
+    max_background = 0
+    congestion_threshold = 0
+    context:
+    fuse = 02097540
+    uid = 0
+    gid = 0
+    pid = 0
+    private_data = 02096010
+    logfile = 02097040
+    rootdir = /home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir
+    umask = 00000
+
+bb_opendir(path="/", fi=0x76017c80)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    opendir returned 0x0x7fdd70001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/.xdg-volume-info", statbuf=0x75816c90)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/.xdg-volume-info", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/.xdg-volume-info"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_access(path="/", mask=04)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+
+bb_getattr(path="/", statbuf=0x76017c60)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2055
+    st_ino = 7348190
+    st_mode = 040775
+
+bb_getattr(path="/autorun.inf", statbuf=0x75816c90)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/autorun.inf", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/autorun.inf"
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x580ca2b4
+    st_mtime = 0x580ca2b4
+    st_ctime = 0x580ca2b4
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/.Trash", statbuf=0x75015c90)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/.Trash", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/.Trash"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_readdir(path="/", buf=0x70001b00, filler=0x76c503b0, offset=0, fi=0x76017c80)
+    readdir returned 0x0x7fdd70001cc0
+calling filler with name .
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name a.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd70001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/bogus.txt", statbuf=0x75015c90)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/bogus.txt", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 2055
+    st_ino = 7348191
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x580ca4df
+    st_mtime = 0x580ca4de
+    st_ctime = 0x580ca4de
+
+bb_getattr(path="/.Trash-1000", statbuf=0x76017c90)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/.Trash-1000", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/.Trash-1000"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/a.txt", statbuf=0x75816c90)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/a.txt", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/a.txt"
+    lstat returned 0
+    si:
+    st_dev = 2055
+    st_ino = 7348223
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 6
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x580ca3a1
+    st_mtime = 0x580ca39f
+    st_ctime = 0x580ca39f
+
+bb_releasedir(path="/", fi=0x76017c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd70001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0x75816c80)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    opendir returned 0x0x7fdd68000c80
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000c80
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x75015c60)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2055
+    st_ino = 7348190
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x580ca2b4
+    st_mtime = 0x580ca2b4
+    st_ctime = 0x580ca2b4
+
+bb_readdir(path="/", buf=0x68000af0, filler=0x76c503b0, offset=0, fi=0x76017c80)
+    readdir returned 0x0x7fdd68000cb0
+calling filler with name .
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name a.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd68000c80
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000c80
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0x76017c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd68000c80
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000c80
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0x76017c80)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    opendir returned 0x0x7fdd70001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x75015c60)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2055
+    st_ino = 7348190
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x580ca2b4
+    st_mtime = 0x580ca2b4
+    st_ctime = 0x580ca2b4
+
+bb_readdir(path="/", buf=0x70001b00, filler=0x76c503b0, offset=0, fi=0x76017c80)
+    readdir returned 0x0x7fdd70001cc0
+calling filler with name .
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name a.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd70001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0x76017c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd70001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0x76017c80)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    opendir returned 0x0x7fdd70001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x75816c60)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2055
+    st_ino = 7348190
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x580ca2b4
+    st_mtime = 0x580ca2b4
+    st_ctime = 0x580ca2b4
+
+bb_readdir(path="/", buf=0x70001b00, filler=0x76c503b0, offset=0, fi=0x76017c80)
+    readdir returned 0x0x7fdd70001cc0
+calling filler with name .
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name a.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd70001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0x76017c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd70001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0x76017c80)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    opendir returned 0x0x7fdd70001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x75816c60)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2055
+    st_ino = 7348190
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x580ca2b4
+    st_mtime = 0x580ca2b4
+    st_ctime = 0x580ca2b4
+
+bb_readdir(path="/", buf=0x70001b00, filler=0x76c503b0, offset=0, fi=0x76017c80)
+    readdir returned 0x0x7fdd70001cc0
+calling filler with name .
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name a.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd70001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0x76017c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd70001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0x76017c80)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    opendir returned 0x0x7fdd70001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x75816c60)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2055
+    st_ino = 7348190
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x580ca2b4
+    st_mtime = 0x580ca2b4
+    st_ctime = 0x580ca2b4
+
+bb_readdir(path="/", buf=0x70001b00, filler=0x76c503b0, offset=0, fi=0x76017c80)
+    readdir returned 0x0x7fdd70001cc0
+calling filler with name .
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name a.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd70001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0x76017c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd70001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0x76017c80)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    opendir returned 0x0x7fdd70001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x75816c60)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2055
+    st_ino = 7348190
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x580ca2b4
+    st_mtime = 0x580ca2b4
+    st_ctime = 0x580ca2b4
+
+bb_readdir(path="/", buf=0x70001b00, filler=0x76c503b0, offset=0, fi=0x76017c80)
+    readdir returned 0x0x7fdd70001cc0
+calling filler with name .
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name a.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd70001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0x76017c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd70001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0x76017c80)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    opendir returned 0x0x7fdd70001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x75816c60)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2055
+    st_ino = 7348190
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x580ca2b4
+    st_mtime = 0x580ca2b4
+    st_ctime = 0x580ca2b4
+
+bb_readdir(path="/", buf=0x70001b00, filler=0x76c503b0, offset=0, fi=0x76017c80)
+    readdir returned 0x0x7fdd70001cc0
+calling filler with name .
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name a.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd70001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0x76017c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd70001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0x76017c80)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    opendir returned 0x0x7fdd70001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x75816c60)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2055
+    st_ino = 7348190
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x580ca2b4
+    st_mtime = 0x580ca2b4
+    st_ctime = 0x580ca2b4
+
+bb_readdir(path="/", buf=0x70001b00, filler=0x76c503b0, offset=0, fi=0x76017c80)
+    readdir returned 0x0x7fdd70001cc0
+calling filler with name .
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name a.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd70001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0x76017c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd70001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0x76017c80)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    opendir returned 0x0x7fdd70001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x75015c60)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2055
+    st_ino = 7348190
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x580ca2b4
+    st_mtime = 0x580ca2b4
+    st_ctime = 0x580ca2b4
+
+bb_readdir(path="/", buf=0x70001b00, filler=0x76c503b0, offset=0, fi=0x76017c80)
+    readdir returned 0x0x7fdd70001cc0
+calling filler with name .
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name a.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd70001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0x76017c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd70001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0x76017c80)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    opendir returned 0x0x7fdd70001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x75015c60)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2055
+    st_ino = 7348190
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x580ca2b4
+    st_mtime = 0x580ca2b4
+    st_ctime = 0x580ca2b4
+
+bb_readdir(path="/", buf=0x70001b00, filler=0x76c503b0, offset=0, fi=0x76017c80)
+    readdir returned 0x0x7fdd70001cc0
+calling filler with name .
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name a.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd70001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0x76017c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd70001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0x76017c80)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    opendir returned 0x0x7fdd70001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x75015c60)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2055
+    st_ino = 7348190
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x580ca2b4
+    st_mtime = 0x580ca2b4
+    st_ctime = 0x580ca2b4
+
+bb_readdir(path="/", buf=0x70001b00, filler=0x76c503b0, offset=0, fi=0x76017c80)
+    readdir returned 0x0x7fdd70001cc0
+calling filler with name .
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name a.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd70001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0x76017c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd70001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0x76017c80)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    opendir returned 0x0x7fdd70001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x75015c60)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2055
+    st_ino = 7348190
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x580ca2b4
+    st_mtime = 0x580ca2b4
+    st_ctime = 0x580ca2b4
+
+bb_readdir(path="/", buf=0x70001b00, filler=0x76c503b0, offset=0, fi=0x76017c80)
+    readdir returned 0x0x7fdd70001cc0
+calling filler with name .
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name a.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd70001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0x76017c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd70001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0x76017c80)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    opendir returned 0x0x7fdd70001c90
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x75015c60)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2055
+    st_ino = 7348190
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x580ca2b4
+    st_mtime = 0x580ca2b4
+    st_ctime = 0x580ca2b4
+
+bb_readdir(path="/", buf=0x70001b00, filler=0x76c503b0, offset=0, fi=0x76017c80)
+    readdir returned 0x0x7fdd70001cc0
+calling filler with name .
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name a.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd70001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0x76017c90)
+    fi:
+
+bb_opendir(path="/", fi=0x75816c80)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    flags = 0x00000000
+    fh_old = 0x7fdd70001c90
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd70001c90
+    lock_owner = 0x0000000000000000
+    opendir returned 0x0x7fdd68000c80
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000c80
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x75015c60)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2055
+    st_ino = 7348190
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x580ca2b4
+    st_mtime = 0x580ca2b4
+    st_ctime = 0x580ca2b4
+
+bb_readdir(path="/", buf=0x68000af0, filler=0x76c503b0, offset=0, fi=0x76017c80)
+    readdir returned 0x0x7fdd68000cb0
+calling filler with name .
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name a.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd68000c80
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000c80
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0x76017c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd68000c80
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000c80
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0x75816c80)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    opendir returned 0x0x7fdd68000bf0
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000bf0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x75015c60)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2055
+    st_ino = 7348190
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x580ca2b4
+    st_mtime = 0x580ca2b4
+    st_ctime = 0x580ca2b4
+
+bb_readdir(path="/", buf=0x68000b70, filler=0x76c503b0, offset=0, fi=0x76017c80)
+    readdir returned 0x0x7fdd68000c20
+calling filler with name .
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name a.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd68000bf0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000bf0
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0x76017c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd68000bf0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000bf0
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0x75816c80)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    opendir returned 0x0x7fdd68000b70
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000b70
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x75015c60)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2055
+    st_ino = 7348190
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x580ca2b4
+    st_mtime = 0x580ca2b4
+    st_ctime = 0x580ca2b4
+
+bb_readdir(path="/", buf=0x68000af0, filler=0x76c503b0, offset=0, fi=0x76017c80)
+    readdir returned 0x0x7fdd68000ba0
+calling filler with name .
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name a.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd68000b70
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000b70
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0x76017c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd68000b70
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000b70
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0x75816c80)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    opendir returned 0x0x7fdd68000af0
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000af0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x75015c60)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2055
+    st_ino = 7348190
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x580ca2b4
+    st_mtime = 0x580ca2b4
+    st_ctime = 0x580ca2b4
+
+bb_readdir(path="/", buf=0x68008bb0, filler=0x76c503b0, offset=0, fi=0x76017c80)
+    readdir returned 0x0x7fdd68000b20
+calling filler with name .
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name a.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd68000af0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000af0
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0x76017c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd68000af0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000af0
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0x75816c80)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    opendir returned 0x0x7fdd68000af0
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000af0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x75015c60)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2055
+    st_ino = 7348190
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x580ca2b4
+    st_mtime = 0x580ca2b4
+    st_ctime = 0x580ca2b4
+
+bb_readdir(path="/", buf=0x68008b30, filler=0x76c503b0, offset=0, fi=0x76017c80)
+    readdir returned 0x0x7fdd68000b20
+calling filler with name .
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name a.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd68000af0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000af0
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0x76017c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd68000af0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000af0
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0x75816c80)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    opendir returned 0x0x7fdd68000c80
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000c80
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x75015c60)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2055
+    st_ino = 7348190
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x580ca2b4
+    st_mtime = 0x580ca2b4
+    st_ctime = 0x580ca2b4
+
+bb_readdir(path="/", buf=0x68000af0, filler=0x76c503b0, offset=0, fi=0x76017c80)
+    readdir returned 0x0x7fdd68000cb0
+calling filler with name .
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name a.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd68000c80
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000c80
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0x76017c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd68000c80
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000c80
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0x75816c80)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    opendir returned 0x0x7fdd68000bf0
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000bf0
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x75015c60)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2055
+    st_ino = 7348190
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x580ca2b4
+    st_mtime = 0x580ca2b4
+    st_ctime = 0x580ca2b4
+
+bb_readdir(path="/", buf=0x68000b70, filler=0x76c503b0, offset=0, fi=0x76017c80)
+    readdir returned 0x0x7fdd68000c20
+calling filler with name .
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name a.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd68000bf0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000bf0
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0x76017c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd68000bf0
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000bf0
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0x75816c80)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    opendir returned 0x0x7fdd68000b70
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000b70
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x75015c60)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2055
+    st_ino = 7348190
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x580ca2b4
+    st_mtime = 0x580ca2b4
+    st_ctime = 0x580ca2b4
+
+bb_readdir(path="/", buf=0x68000af0, filler=0x76c503b0, offset=0, fi=0x76017c80)
+    readdir returned 0x0x7fdd68000ba0
+calling filler with name .
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name a.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd68000b70
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000b70
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0x76017c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd68000b70
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000b70
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0x75816c80)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    opendir returned 0x0x7fdd68000c80
+    fi:
+    flags = 0x00018800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000c80
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x75015c60)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2055
+    st_ino = 7348190
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x580ca2b4
+    st_mtime = 0x580ca2b4
+    st_ctime = 0x580ca2b4
+
+bb_readdir(path="/", buf=0x68000af0, filler=0x76c503b0, offset=0, fi=0x76017c80)
+    readdir returned 0x0x7fdd68000cb0
+calling filler with name .
+calling filler with name bogus.txt
+calling filler with name ..
+calling filler with name a.txt
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd68000c80
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000c80
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0x76017c90)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x7fdd68000c80
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007fdd68000c80
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/autorun.inf", statbuf=0x76017c90)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/autorun.inf", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/autorun.inf"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/", statbuf=0x75015c60)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 2055
+    st_ino = 7348190
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x580ca2b4
+    st_mtime = 0x580ca2b4
+    st_ctime = 0x580ca2b4
+
+bb_access(path="/", mask=01)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/"
+
+bb_getattr(path="/a.txt", statbuf=0x75816c90)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/a.txt", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/a.txt"
+    lstat returned 0
+    si:
+    st_dev = 2055
+    st_ino = 7348223
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 6
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x580ca3a1
+    st_mtime = 0x580ca39f
+    st_ctime = 0x580ca39f
+
+bb_open(path"/a.txt", fi=0x75015d40)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/a.txt", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/a.txt"
+    open returned 5
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_truncate(path="/a.txt", newsize=0)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/a.txt", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/a.txt"
+    truncate returned 0
+
+bb_getattr(path="/a.txt", statbuf=0x75816bc0)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/a.txt", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/a.txt"
+    lstat returned 0
+    si:
+    st_dev = 2055
+    st_ino = 7348223
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x580ca3a1
+    st_mtime = 0x580ca518
+    st_ctime = 0x580ca518
+
+bb_flush(path="/a.txt", fi=0x75015d40)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x81f779e621ff9276
+hello
+
+bb_write(path="/a.txt", buf=0x77065060, size=6, offset=0, fi=0x76017db0)
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_open(path"/tmp/blockstore/1", fi=0x00000000)
+    bb_fullpath:  rootdir = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir", path = "/tmp/blockstore/1", fpath = "/home/naveenkenz12/Desktop/fuse-tutorial-2016-03-25/example/rootdir/tmp/blockstore/1"
